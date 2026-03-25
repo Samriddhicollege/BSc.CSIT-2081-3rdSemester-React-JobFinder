@@ -310,3 +310,4 @@ This project is open source and available for educational purposes.
 **Built with ❤️ using React + Vite**
 
 *Last Updated: March 23, 2026*
+# Job-finder
