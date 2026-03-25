@@ -1,0 +1,229 @@
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardHover {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  animation: cardEntrance 0.5s ease-out backwards;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card:nth-child(1) { animation-delay: 0.05s; }
+.job-card:nth-child(2) { animation-delay: 0.1s; }
+.job-card:nth-child(3) { animation-delay: 0.15s; }
+.job-card:nth-child(4) { animation-delay: 0.2s; }
+.job-card:nth-child(5) { animation-delay: 0.25s; }
+.job-card:nth-child(n+6) { animation-delay: 0.3s; }
+
+.job-card.expanded {
+  width: 100%;
+  max-width: 100%;
+  transform: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  position: relative;
+}
+
+.job-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: start;
+  gap: 15px;
+}
+
+.logo-wrapper {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.company-name {
+  margin: 2px 0 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.apply-link {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #fff;
+  background: var(--apply-bg);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.apply-link:hover {
+  background: var(--apply-hover);
+  transform: translateY(-2px);
+}
+  margin-bottom: 12px;
+}
+
+.job-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 18px;
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.job-card:hover .job-title {
+  color: var(--hover-color);
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.saved-badge {
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: badgePulse 2s ease-in-out infinite;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+.job-always-visible {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.job-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-excerpt {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 12px 0;
+  transition: color 0.3s ease;
+  flex: 1;
+}
+
+.job-card:hover .job-excerpt {
+  color: var(--text-color);
+}
+
+.job-meta {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: var(--text-light);
+  width: fit-content;
+}
+
+.job-meta span {
+  background-color: var(--meta-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+
+.show-details-container {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.show-details-link {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.show-details-link:hover {
+  color: var(--text-color);
+}
+
+.job-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.apply-link,
+.job-actions button {
+  flex: 1;
+  text-align: center;
+}
