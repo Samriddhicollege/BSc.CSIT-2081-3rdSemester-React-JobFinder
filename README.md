@@ -95,7 +95,7 @@
 git clone https://github.com/Samriddhicollege/BSc.CSIT-2081-3rdSemester-React-JobFinder.git
 
 # Go to project folder
-cd  React_Jobfinder
+cd jobfinder
 
 # Install dependencies
 npm install
@@ -110,13 +110,33 @@ npm run dev
 
 ```
 /project-root
-│── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── utils/
-│   ├── App.jsx
-│   ├── main.jsx
+src/
+├── components/              # Reusable UI components
+│   ├── Button.jsx           # Reusable button component
+│   ├── Button.css           # Button styles
+│   ├── JobCard.jsx          # Individual job listing card
+│   ├── JobCard.css          # Job card styles
+│   ├── SearchBar.jsx        # Search input with validation
+│   ├── SearchBar.css        # Search bar styles
+│   ├── Loader.jsx           # Loading spinner
+│   └── Loader.css           # Loader styles
+│
+├── pages/                   # Page components
+│   ├── Home.jsx             # Main job browsing page
+│   ├── SavedJobs.jsx        # Saved jobs management page
+│   └── Pages.css            # Page-specific styles
+│
+├── utils/                   # Utility functions
+│   ├── api.js               # API integration (axios)
+│   └── storage.js           # localStorage operations
+│
+├── hooks/                   # Custom React hooks
+│   └── useLocalStorage.js   # Reusable localStorage hook
+│
+├── App.jsx                  # Main App component with routing
+├── App.css                  # App-level styles
+├── main.jsx                 # React entry point
+└── index.css                # Global styles
 │
 │── public/
 │── README.md
@@ -126,7 +146,8 @@ npm run dev
 
 ## GitHub & Live Demo
 
-* **GitHub Repository:** https://github.com/Samriddhicollege/BSc.CSIT-2081-3rdSemester-React-JobFinder.git
+* **GitHub Repository:** BSc.CSIT-2081-3rdSemester-React-JobFinder.git
+
 * **Live URL (if deployed):** (Add deployed link if available)  
 
 ---
