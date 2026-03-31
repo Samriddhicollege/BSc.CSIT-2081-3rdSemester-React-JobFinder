@@ -148,7 +148,7 @@ src/
 
 * **GitHub Repository:** BSc.CSIT-2081-3rdSemester-React-JobFinder.git
 
-* **Live URL (if deployed):** (Add deployed link if available)  
+* **Live URL (if deployed):** https://jobfindervercelcom.vercel.app/~ 
 
 ---
 
