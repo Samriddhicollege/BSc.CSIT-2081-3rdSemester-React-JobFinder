@@ -38,7 +38,7 @@
   --bg-color: #1a1a2e;
   --card-bg: #16213e;
   --text-color: #ffffff;
-  --text-light: #b0b0b0;
+  --text-light: #ffffff;
   --border-color: #2a2a4e;
   --hover-color: #00d4ff;
   --meta-bg: #0f3460;
@@ -116,8 +116,8 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--text-color);
+  background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation: fadeIn 0.5s ease-in;
@@ -130,8 +130,8 @@ body {
   flex-direction: column;
 }
 
-h1, h2, h3 {
-  color: var(--color-text);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }

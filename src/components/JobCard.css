@@ -87,13 +87,12 @@
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  margin-bottom: 12px;
 }
 
 .apply-link:hover {
   background: var(--apply-hover);
   transform: translateY(-2px);
-}
-  margin-bottom: 12px;
 }
 
 .job-title {
